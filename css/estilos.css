@@ -1,0 +1,20 @@
+body{
+    background: #abdee9;
+    background: linear-gradient(to right, #d8d9da, #abdee9);
+}
+.bg{
+    background-image: url(../imagenes/logo.jpg);
+    background-position: center center;
+}
+
+    footer
+{
+	background:#006699;
+	bottom:0;
+	color: #fff;;
+	left:0;
+	padding:0;
+	position:fixed;
+	right:0;
+	text-align:center;
+}
