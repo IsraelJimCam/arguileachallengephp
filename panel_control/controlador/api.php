@@ -10,9 +10,9 @@ curl_setopt($curl, CURLOPT_URL, 'https://api.copomex.com/query/info_cp/'. $codig
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($curl);
-//echo $response;
+echo $response;
 
-curl_close($curl);
+//curl_close($curl);
 /*
 // Buscar dni
 curl_setopt_array($curl, array(
