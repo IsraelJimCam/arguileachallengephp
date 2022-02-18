@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-02-2022 a las 06:09:36
+-- Tiempo de generación: 18-02-2022 a las 05:43:08
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.12
 
@@ -58,8 +58,20 @@ CREATE TABLE `fondas` (
   `municipio` varchar(200) NOT NULL,
   `ciudad` varchar(200) NOT NULL,
   `estado` varchar(200) NOT NULL,
-  `pais` varchar(200) NOT NULL
+  `pais` varchar(200) NOT NULL,
+  `fecha_creacion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `fondas`
+--
+
+INSERT INTO `fondas` (`idfonda`, `nombre`, `calle`, `numero_exterior`, `numero_interior`, `codigo_postal`, `colonia`, `municipio`, `ciudad`, `estado`, `pais`, `fecha_creacion`) VALUES
+(1, 'Fonda el charro', 'Guadalupe Victoria', '14', '2', 53697, 'El Rosario Izcalli', 'Naucalpan', 'Naucalpan de Juárez', 'Estado de México', 'México', '2022-02-17'),
+(2, 'Fonda Don Pérez', 'Miguel Hidalgo', '5', '1', 53697, 'Minas el Tecolote', 'Chalco', 'Chalco de Díaz Covarrubias', 'Estado de México', 'México', '2022-02-17'),
+(3, 'Fonda el Bronco', 'Benito Juárez', '56', '7', 56640, 'Santa María', 'Tultitlan', 'Tlalnepantla', 'Estado de México', 'México', '2022-02-17'),
+(4, 'Fonda la Radio', 'Polonia', '8', '2', 54710, 'Napoles', 'Benito Juárez', 'Benito Juárez', 'Ciudad de México', 'México', '2022-02-17'),
+(5, 'Fonda Garrido', 'Guadalupe Victoria', '4', '6', 54782, 'Huilango', 'Naucalpan', 'Naucalpan de Juárez', 'Estado de México', 'México', '2022-02-17');
 
 -- --------------------------------------------------------
 
@@ -150,7 +162,7 @@ ALTER TABLE `configuracion`
 -- AUTO_INCREMENT de la tabla `fondas`
 --
 ALTER TABLE `fondas`
-  MODIFY `idfonda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idfonda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `platillos`
