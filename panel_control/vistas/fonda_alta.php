@@ -1,35 +1,38 @@
 <body>
     <div id="fonda" class="container w-75 my-5 rounded shadow">
         <div class="col bg-white p-2 rounded-end">
-                <div class="text-end">
-                </div>
+                
                 <form action="fonda_alta.php" method="POST">
-                    <div class="mb4">
-                        <br>
-                        <input type="number" class="col-sm-2" name="codigo_postal" id="codigo_postal" placeholder="Codigo Postal">
-                       </div>
-                    <div class="mb4">
-                        <br>
-                        <input  id="municipio" >
+                    <strong><center>Dar de Alta Nueva Fonda</center></strong>
+                    <br>
+                <div class="mb4">
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre de la Fonda" required="required">
                     </div>
                     <div class="mb4">
                         <br>
-                        <input type="text" class="form-control" name="estado" id="estado" placeholder="Estado">
-                    </div>
-                    <div class="mb4">
+                        <label><strong>Datos de Dirección</strong></label>
                         <br>
-                        <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" id="ciudad">
+                        <input type="text" class="col-sm-3" name="calle" id="calle" placeholder="Calle" required="required">
+                        <input type="number" class="col-sm-1" name="numero_exterior" id="numero_exterior" placeholder="Núm. Ext.">
+                        <input type="number" class="col-sm-1" name="numero_interior" id="numero_interior" placeholder="Núm. Int.">
+                        <hr>
+                        <input type="text" class="col-sm-4" name="colonia" id="colonia" placeholder="Colonia" required="required">
+                        <input type="number" class="col-sm-2" name="codigo_postal" id="codigo_postal" placeholder="Código Postal" required="required">
+                        <input type="text" class="col-sm-3" name="municipio" id="municipio" placeholder="Municipio y/o Delegación" required="required">
+                        <hr>
+                        <input type="text" class="col-sm-4" name="ciudad" id="ciudad" placeholder="Ciudad" required="required">
+                        <input type="text" class="col-sm-4" name="estado" id="estado" placeholder="Estado" required="required">
+                        <input type="text" class="col-sm-3" name="pais" id="pais" placeholder="País" required="required">
                     </div>
-                   
                     <div>
                         <br>
                        <center> <button type="submit" class="btn btn-info" name="guardar" value="1">Guardar Datos</button>
-                        <a href="index.php"class="btn btn-warning">Cancelar</a></center>
+                        <a href="fondas.php"class="btn btn-warning">Cancelar</a></center>
                     </div>
                     
                 </form>
             </div>
-            <!--<script src="js/app.js"></script>-->
+            
     </div>
 </body>
 <script>

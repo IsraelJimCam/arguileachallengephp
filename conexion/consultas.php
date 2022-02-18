@@ -36,12 +36,15 @@ class consultas_sql
         $varsesion->set('usuario', $fila['usuario']);
         $_SESSION['id'] = $fila['id'];
         $_SESSION['usuario'] = $fila['usuario'];
+        $_SESSION['time'] = time();
            
                    header('location: ' . URL . 'panel_control/');
             
         }
          elseif($contador == 0)
         {
+            echo "<script>alert('Datos Incorrectos!')</script>";
+	        echo "<script>window.location='index.php'</script>";
         }
     }
 

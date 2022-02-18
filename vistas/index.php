@@ -10,16 +10,16 @@
             
                 <form action="index.php" method="POST">
                     <div class="mb4">
-                        <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
+                        <input type="text" class="form-control"  name="usuario" id="usuario" placeholder="Usuario" required="required">
                     </div>
                     <div class="mb4">
                         <br>
-                        <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" id="contrasena">
+                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña" required="required">
                     </div>
                    
                     <div class="d-grid">
                         <br>
-                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-primary btn-block" name="boton" value="1">Iniciar Sesión</button>
                     </div>
                     <div class="my-3">
                         <span>¿No tienes cuenta? <a href="registrate.php">Registrate</a></span><br>

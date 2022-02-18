@@ -4,6 +4,11 @@ if(!$_SESSION['usuario'])
 {
     header("Location: ../index.php");
 }
+else{
+  if((time() - $_SESSION['time']) > 3000){
+    header('location: ../cerrar_sesion.php');
+  }
+}
 include('librerias/fecha.php');
 include('conexion/url.php');
 include('conexion/consultas.php');

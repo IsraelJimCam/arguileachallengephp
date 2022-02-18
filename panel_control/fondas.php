@@ -14,9 +14,13 @@ $consulta_fonda = new consultas_sql();
 $fonda_fila .='<tr>
 <td scope="row">'.$num.'</td>
 <td scope="row">'.$fila['nombre'].'</td>
-<td scope="row">$'.$fila['costo'].'.00</td>
-<td scope="row">'.$fila['idfonda'].'</td>
-<td scope="row"></td>
+<td scope="row">'.$fila['calle'].'</td>
+<td scope="row">'.$fila['numero_exterior'].'</td>
+<td scope="row">'.$fila['numero_interior'].'</td>
+<td scope="row">'.$fila['municipio'].'</td>
+<td scope="row">'.$fila['ciudad'].'</td>
+<td scope="row">'.$fila['estado'].'</td>
+<td scope="row">'.$fila['pais'].'</td>
 <td scope="row"><input type="submit" class="btn btn-primary btn-block" name="eliminar" value="Eliminar"></td>
 </tr>';
                         }

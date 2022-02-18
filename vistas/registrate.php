@@ -7,19 +7,19 @@
                 <form action="registrate.php" method="POST">
                     <div class="mb4">
                         <br>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Completo">
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Completo" required="required>
                     </div>
                     <div class="mb4">
                         <br>
-                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo">
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" required="required>
                     </div>
                     <div class="mb4">
                         <br>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" required="required>
                     </div>
                     <div class="mb4">
                         <br>
-                        <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" id="contrasena">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" id="contrasena" required="required">
                     </div>
                    
                     <div>

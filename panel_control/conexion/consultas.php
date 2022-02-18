@@ -44,30 +44,76 @@ class consultas_sql
         return $fila;
     }  
     
-    public function guardar_usuario(){
-             $insertar_usuario = $this->base_datos->prepare('INSERT INTO usuarios 
-             VALUES (:id, :usuario, :contrasena, :nombre, :correo, :estatus, :fecha_creacion)');
-             
-                  $usuario        = $_REQUEST['usuario'];
-                  $contrasena     = md5($_REQUEST['contrasena']);
-                  $nombre         = $_REQUEST['nombre'];
-                  $correo         = $_REQUEST['correo'];
-                  $estatus        = 1;
-                  $fecha_creacion = date('Y-m-d');
-                  $id = ''; 
-             
-                  $insertar_usuario->execute(array(
-                  ':id'             => $id,
-                  ':usuario'        => $usuario,
-                  ':contrasena'     => $contrasena,
-                  ':nombre'         => $nombre,
-                  ':correo'         => $correo,
-                  ':estatus'        => $estatus,
-                  ':fecha_creacion' => $fecha_creacion
-              ));    
-      
-              
-                  header('Location: ' . URL);  
+    public function guardar_fonda(){
+       if($_REQUEST['numero_interior']=='')
+       {
+        $insertar_fonda = $this->base_datos->prepare('INSERT INTO fondas 
+        VALUES (:idfonda, :nombre, :calle, :numero_exterior, :numero_interior, :codigo_postal, :colonia, :municipio, :ciudad, :estado, :pais, :fecha_creacion)');
+        
+             $nombre               = $_REQUEST['nombre'];
+             $calle                = $_REQUEST['calle'];
+             $numero_exterior      = $_REQUEST['numero_exterior'];
+             $numero_interior      = "S/N";
+             $codigo_postal        = $_REQUEST['codigo_postal'];
+             $colonia              = $_REQUEST['colonia'];
+             $municipio            = $_REQUEST['municipio'];
+             $ciudad               = $_REQUEST['ciudad'];
+             $estado               = $_REQUEST['estado'];
+             $pais                 = $_REQUEST['pais'];
+             $fecha_creacion       = date('Y-m-d');
+             $idfonda = ''; 
+        
+             $insertar_fonda->execute(array(
+             ':idfonda'            => $idfonda,
+             ':nombre'             => $nombre,
+             ':calle'              => $calle,
+             ':numero_exterior'    => $numero_exterior,
+             ':numero_interior'    => $numero_interior,
+             ':codigo_postal'      => $codigo_postal,
+             ':colonia'            => $colonia,
+             ':municipio'          => $municipio,
+             ':ciudad'             => $ciudad,
+             ':estado'             => $estado,
+             ':pais'               => $pais,
+             ':fecha_creacion'     => $fecha_creacion
+         ));  
+         header('Location: ' . URL . 'fondas');       
+            }
+            else
+            {
+                $insertar_fonda = $this->base_datos->prepare('INSERT INTO fondas 
+                VALUES (:idfonda, :nombre, :calle, :numero_exterior, :numero_interior, :codigo_postal, :colonia, :municipio, :ciudad, :estado, :pais, :fecha_creacion)');
+                
+                     $nombre               = $_REQUEST['nombre'];
+                     $calle                = $_REQUEST['calle'];
+                     $numero_exterior      = $_REQUEST['numero_exterior'];
+                     $numero_interior      = $_REQUEST['numero_interior'];
+                     $codigo_postal        = $_REQUEST['codigo_postal'];
+                     $colonia              = $_REQUEST['colonia'];
+                     $municipio            = $_REQUEST['municipio'];
+                     $ciudad               = $_REQUEST['ciudad'];
+                     $estado               = $_REQUEST['estado'];
+                     $pais                 = $_REQUEST['pais'];
+                     $fecha_creacion       = date('Y-m-d');
+                     $idfonda = ''; 
+                
+                     $insertar_fonda->execute(array(
+                     ':idfonda'            => $idfonda,
+                     ':nombre'             => $nombre,
+                     ':calle'              => $calle,
+                     ':numero_exterior'    => $numero_exterior,
+                     ':numero_interior'    => $numero_interior,
+                     ':codigo_postal'      => $codigo_postal,
+                     ':colonia'            => $colonia,
+                     ':municipio'          => $municipio,
+                     ':ciudad'             => $ciudad,
+                     ':estado'             => $estado,
+                     ':pais'               => $pais,
+                     ':fecha_creacion'     => $fecha_creacion
+                 ));
+                 header('Location: ' . URL . 'fondas.php');   
+            }
+                   
                }
               
       
