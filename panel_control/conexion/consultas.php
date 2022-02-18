@@ -13,7 +13,9 @@ class consultas_sql
   }
   public function mostrar_platillos(){
 
-        $platillos = $this->base_datos->prepare('SELECT * FROM platillos');
+        $platillos = $this->base_datos->prepare('SELECT p.*, f.idfonda, f.nombre AS nombre_fonda FROM platillos p 
+        INNER JOIN fondas f
+        ON p.idfonda = f.idfonda');
     
         $platillos->execute();
     
@@ -115,7 +117,8 @@ class consultas_sql
             }
                    
                }
-              
+    
+               
       
 }
 ?>
