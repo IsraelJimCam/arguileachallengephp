@@ -1,5 +1,4 @@
 # arguileachallengephp
-Prueba Técnica para ingresar a arguilea
 
 Prueba Técnica para ingresar a arguilea
 
