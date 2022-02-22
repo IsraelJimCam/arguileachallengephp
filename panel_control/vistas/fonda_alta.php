@@ -13,8 +13,8 @@
                         <label><strong>Datos de Dirección</strong></label>
                         <br>
                         <input type="text" class="col-sm-3" name="calle" id="calle" placeholder="Calle" required="required">
-                        <input type="number" class="col-sm-1" name="numero_exterior" id="numero_exterior" placeholder="Núm. Ext.">
-                        <input type="number" class="col-sm-1" name="numero_interior" id="numero_interior" placeholder="Núm. Int.">
+                        <input type="number" class="col-sm-1" name="numero_exterior" id="numero_exterior" placeholder="Núm. Ext." required="required">
+                        <input type="number" class="col-sm-1" name="numero_interior" id="numero_interior" placeholder="Núm. Int." required="required">
                         <hr>
                         <input type="text" class="col-sm-4" name="colonia" id="colonia" placeholder="Colonia" required="required">
                         <input type="number" class="col-sm-2" name="codigo_postal" id="codigo_postal" placeholder="Código Postal" required="required">
