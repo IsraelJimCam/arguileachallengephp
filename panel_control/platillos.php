@@ -24,12 +24,12 @@ $platillo_fila .='<tr>
                         }
                     }
 
-        if(isset($_POST['eliminar']))
+        if(isset($_POST['detalle']))
     {
       foreach ($_POST['idplatillo2'] AS $ids) 
       {
-        $idsolicitud         = $_POST['idplatillo2'][$ids];
-        include 'conexion/consultas.php';
+        $idplatillo         = $_POST['idplatillo2'][$ids];
+       
       }
     } 
                     
