@@ -82,13 +82,14 @@ class consultas_sql
                }
                public function guardar_platillo(){
                 $insertar_fonda = $this->base_datos->prepare('INSERT INTO platillos
-                VALUES (:idplatillo, :nombre, :descripcion, :ingredientes, :costo, :idfonda, :fecha_creacion)');
+                VALUES (:idplatillo, :nombre, :descripcion, :ingredientes, :costo, :idfonda, :categoria, :fecha_creacion)');
                 
                      $nombre               = $_REQUEST['nombre'];
                      $descripcion          = $_REQUEST['descripcion'];
                      $ingredientes         = $_REQUEST['ingredientes'];
                      $costo                = $_REQUEST['costo'];
                      $idfonda              = $_REQUEST['fonda'];
+                     $categoria            = $_REQUEST['categoria'];
                      $fecha_creacion       = date('Y-m-d');
                      $idplatillo = ''; 
                 
@@ -99,6 +100,7 @@ class consultas_sql
                      ':ingredientes'       => $ingredientes,
                      ':costo'              => $costo,
                      ':idfonda'            => $idfonda,
+                     ':categoria'          => $categoria,
                      ':fecha_creacion'     => $fecha_creacion
                  ));
                  header('Location: ' . URL . 'platillos.php');   

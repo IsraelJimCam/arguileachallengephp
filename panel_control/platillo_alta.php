@@ -16,7 +16,7 @@ $resultado = $consulta_fonda->mostrar_fondas();
 if(isset($_REQUEST['guardar']))
 {
     
-if(($_REQUEST['nombre']) && ($_REQUEST['descripcion']) && ($_REQUEST['ingredientes']) && ($_REQUEST['costo']) && ($_REQUEST['fonda']))        
+if(($_REQUEST['nombre']) && ($_REQUEST['descripcion']) && ($_REQUEST['ingredientes']) && ($_REQUEST['costo']) && ($_REQUEST['fonda'] && ($_REQUEST['categoria'])))        
     {
      $guardar_platillo = new consultas_sql();
      $guardar_platillo->guardar_platillo();

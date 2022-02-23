@@ -29,7 +29,7 @@ $platillo_fila .='<tr>
       foreach ($_POST['idplatillo2'] AS $ids) 
       {
         $idplatillo         = $_POST['idplatillo2'][$ids];
-       
+        include 'detalle.php';
       }
     } 
                     

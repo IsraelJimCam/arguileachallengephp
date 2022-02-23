@@ -19,7 +19,9 @@
                         <select name="fonda" id="fonda" >
 						<option>Selecciona una opción</option>
 						<?=$fonda_filas?>
-					    </select>    
+					    </select> 
+                        <input type="text" class="col-sm-8" name="categoria" id="categoria" placeholder="Categoría" required="required">
+                          
                     </div>
                     <div>
                         <br>
